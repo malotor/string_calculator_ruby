@@ -1,9 +1,9 @@
 class StringCalculator 
 	def self.add(string)
-		if string.length == 0
-			return 0
-		else
-			return string.to_i
+		result = 0
+		for number in string.split(',') 
+			result = result + number.to_i
 		end
+		return result
 	end
 end
