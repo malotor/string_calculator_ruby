@@ -10,5 +10,6 @@ class TestStringCalculator < Test::Unit::TestCase
 	end
 	def test_two_arguments
 		assert_equal 2, StringCalculator.add("1,1")
+		assert_equal 3, StringCalculator.add("1,2")
 	end
 end
