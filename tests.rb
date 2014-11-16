@@ -21,4 +21,8 @@ class TestStringCalculator < Test::Unit::TestCase
 		assert_equal 6, StringCalculator.add("1\n2,\n\n3")
 		assert_equal 6, StringCalculator.add("1,2\n,\n\n3")
 	end
+	def test_custom_delimiters
+		assert_equal 3, StringCalculator.add("//;\n1;2")
+		assert_equal 8, StringCalculator.add("//:3:4:1")
+	end
 end
