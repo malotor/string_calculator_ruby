@@ -12,4 +12,13 @@ class TestStringCalculator < Test::Unit::TestCase
 		assert_equal 2, StringCalculator.add("1,1")
 		assert_equal 3, StringCalculator.add("1,2")
 	end
+	def test_more_than_two_arguments
+		assert_equal 3, StringCalculator.add("1,1,1")
+	end
+	def test_handle_new_lines
+		assert_equal 6, StringCalculator.add("1\n2,3")
+		assert_equal 6, StringCalculator.add("1\n2,\n3")
+		assert_equal 6, StringCalculator.add("1\n2,\n\n3")
+		assert_equal 6, StringCalculator.add("1,2\n,\n\n3")
+	end
 end
