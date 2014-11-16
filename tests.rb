@@ -23,6 +23,6 @@ class TestStringCalculator < Test::Unit::TestCase
 	end
 	def test_custom_delimiters
 		assert_equal 3, StringCalculator.add("//;\n1;2")
-		assert_equal 8, StringCalculator.add("//:3:4:1")
+		assert_equal 8, StringCalculator.add("//:\n3:4:1")
 	end
 end
